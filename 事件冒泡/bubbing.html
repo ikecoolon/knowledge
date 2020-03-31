@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<script type="javascript" src="bubbing.js"></script>-->
+    <meta charset="UTF-8">
+    <title>Bubbing</title>
+</head>
+<body>
+    <a>Link</a>
+    <b>BB</b>
+    <i>It</i>
+</body>
+<script>
+    function test(event) {
+        console.log(event.target.tagName);
+    }
+
+    document.querySelector('body').addEventListener('click',test,false);
+</script>
+</html>

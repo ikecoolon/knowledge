@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scope 没有块级作用域造成的混乱</title>
+</head>
+<body>
+
+</body>
+<script>
+    //scope 没有块级作用域造成的混乱
+    {
+        var haha = 'haha ';
+    }
+    console.log(haha); //能输出
+    if (!("a" in window)) {
+        console.log('Windows 里没有a');
+        var a = 1;//这变成了前置声明
+    }
+    console.log(a);//----undefined
+    //只有function里面的var 才有作用域
+
+    //let 更接近java的规定，先声明再使用
+
+    //const 常量，定义后不能再修改，但常量如果是对象，对象里面的值是可以被修改的
+
+    //tdz临时性死区（语言设计上的缺陷）,和java不一样
+    let userName='haha';
+    {
+        console.log(userName);//Cannot access 'userName' before initialization
+        let userName='111';
+    }
+</script>
+</html>

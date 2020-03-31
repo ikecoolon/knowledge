@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>解构赋值</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let [a, b, c] = [1, 2, 3];
+    console.log(a);
+    console.log(b);
+    console.log(c);
+
+    let [d, ...e] = [1, 2, 3, 4, 5,];
+    console.log(d);
+    console.log(e);
+
+
+    //1实际用法 交换变量
+    let f = 1;
+    let g = 2;
+
+    [f, g] = [g, f];
+    console.log(f);
+    console.log(g);
+
+    //2对象解构赋值  可以设置别名
+    let {name: myName, age: myAge} = {name: 'ddd', age: 11};
+    console.log(myName);
+    console.log(myAge);
+
+    //3函数传参解构
+    function sum({a = 0, b = 0}) {
+        return a + b;
+    }
+
+    console.log(sum({a: 1, b: 3}))
+</script>

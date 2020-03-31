@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="my-div"></div>
+<div class="my-div"></div>
+<script type="text/javascript" src="jquery-2.2.4.js"></script>
+<script>
+    console.log($);
+
+    //疑问？为什么有两个，有什么区别
+    // fun.call(window);
+    // fun.apply(window);
+
+    $(function () {
+
+        var $div = $('.my-div');
+        $div.addClass('my-div2').css({
+            backgroundColor: '#000',
+        }).text('HaHa');
+    });
+
+    //类数组是什么
+    console.log($div);
+    console.log(document.querySelectorAll('.my-div'));
+
+    //有什么区别？
+     new  JQuery.fn.init();
+     JQuery.fn.init();
+
+     //共享原型和继承的区别
+
+    //1、$核心函数有重载的功能，是如何设计的？
+    //2、选择器返回的对象是什么对象？
+    //3、链式操作是如何实现的？
+
+
+</script>
+</body>
+</html>
