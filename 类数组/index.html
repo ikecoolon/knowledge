@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        let something = function () {
+            console.log(arguments);
+            console.log(Array.from(arguments));//es6
+            console.log(Array.prototype.slice.call(arguments));//es5
+
+
+        };
+        something(1, 2);
+
+        let something2 = {
+            0: 'tom',
+            length: 2
+        }
+        let something3 = {
+            0: 'tom',
+            1: 'jerry',
+            length: 1
+        }
+        let something4 = {
+            3: 'tom',
+            1: 'jerry',
+            length: 2
+        }
+
+        console.log(Array.from(something2));
+        console.log(Array.from(something3));
+        console.log(Array.from(something4));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
