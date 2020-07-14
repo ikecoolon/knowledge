@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>执行顺序</title>
+<!--    <script src="exe1.js">-->
+    <script src="exe2.js">
+
+        /**
+         * 执行顺序： 逐步执行--> 有代码异步操作【放入异步队列】-->执行完毕-->询问是否有异步-->异步回调主任务执行
+         *
+         * 异步队列分为：
+         * []微任务   Promise、process.nextTick(node的较少使用)
+         * []宏认为   整体代码script、 setTimeout、setInterval
+         * 微任务执行完了，才执行宏认为
+         *
+          */
+    </script>
+</head>
+<body>
+
+</body>
+</html>
