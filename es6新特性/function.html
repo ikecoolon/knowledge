@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function</title>
+</head>
+<body>
+<script>
+    function getValue(x) {
+        return x+5;
+    }
+
+    /**
+     * es6 默认参数
+     *
+     */
+    function f1(x,y=1,c=getValue(x)) {
+        //arguments 对象在严格/非严格模式下都不会跟着值变动
+    }
+
+    /**
+     *
+     * @param x
+     * @param args ... 定义 不定参数
+     */
+    function f2(x,...args) {
+
+    }
+
+    /**
+     * 展开运算符
+     *
+     */
+    function f3() {
+        //例如 Math.max（）比较多个参数时
+        let args=[12,55,43,52];
+        Math.max(...args);//相当于在执行Math.max(12,55,43,52);
+
+    }
+
+    function fname1() {
+
+    }
+    var fname2=function haha() {
+
+
+    }
+    console.log(fname1.name)//es6 增加了 name 这个属性
+    console.log(fname2.name)// haha 函数命名比变量命名权重高
+
+</script>
+</body>
+</html>

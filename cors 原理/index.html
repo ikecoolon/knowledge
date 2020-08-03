@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cros 原理</title>
+</head>
+<script>
+    //1、http 协议一部分，用于处理跨域问题（主要是 ajax）
+    // 请求头里有 Origin
+    //css 图片、script 不受同源策略影响
+    // 简单请求/ 非简单请求【预检请求(option)】请求方法是PUT或DELETE，或者Content-Type字段的类型是application/json的
+    //请求是 header 会增加Origin（协议 + 域名 + 端口）
+    //Access-Control-Allow-Credentials 能允许传递 cookie 但 cookie 仍在同源策略下
+    //服务端跨域判断是否合法请求源 再设置Access-Control-Allow-Origin 返回给前端
+
+
+</script>
+<body>
+
+</body>
+</html>
