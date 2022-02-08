@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // Flatten a nested array
+    function flatten(array) {
+        let temp = [];
+        let action = function (array) {
+            for (let arr of array) {
+
+                if (arr instanceof Array) {
+                    action(arr);
+                } else {
+                    if (arr != null && arr !== '') {
+                        temp.push(arr);
+                    }
+                }
+            }
+        };
+        action(array);
+        return temp;
+    }
+
+    console.log(flatten([1, [2], [3, [4], []], 5]));    // [1, 2, 3, 4, 5]
+</script>
+
+</body>
+</html>

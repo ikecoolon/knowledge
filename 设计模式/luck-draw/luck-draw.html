@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>转盘抽奖</title>
+    <style>
+
+        .turnplate-bg {
+            width: 422px;
+            height: 422px;
+            background-color: dodgerblue;
+        }
+
+        .turnplate {
+            width: 100%;
+            height: 100%;
+            background-color: #1bacff;
+            border-radius: 50%;
+        }
+
+        .item {
+            width: 422px;
+            height: 422px;
+        }
+
+        .pointer-container {
+            width: 422px;
+            height: 422px;
+            position: absolute;
+            z-index: 10;
+            left: 8px;
+            top: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .pointer {
+            position: relative;
+            height: 90px;
+            width: 70px;
+        }
+    </style>
+    <script src="luck-draw.js"></script>
+    <script>
+        window.onload = function () {
+            let turnplate = [];
+            turnplate.restaraunts = ["50元代金券", "升职加薪", "100元代金券", "财源滚滚", "200元代金券", "爱情甜蜜 ", "500元代金券", "变美变帅"];
+            turnplate.colors = ["#1b62ca", "#1bacff", "#1b62ca", "#1bacff", "#1b62ca", "#1bacff", "#1b62ca", "#1bacff"];
+
+            let wheelcanvas = document.getElementById("wheelcanvas");
+            let luckDraw = new LuckDraw(turnplate, wheelcanvas);
+
+            luckDraw.run();
+        }
+
+    </script>
+</head>
+<body>
+
+<div class="turnplate-bg">
+    <div class="turnplate">
+        <canvas class="item" id="wheelcanvas">
+        </canvas>
+        <div class="pointer-container">
+            <img src="pointer.png" class="pointer" alt="图片不存在">
+        </div>
+    </div>
+</div>
+</body>
+</html>
