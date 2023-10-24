@@ -2,11 +2,13 @@ var name = 'tiger';
 
 function Animal() {
     var name = 'lion';
-    console.log(this.name);
+    console.log(this.name);//this指向Animal对象
+    console.log(this);
 }
 
-Animal.call({name: 'pig'});
-Animal.bind({name: 'cat'})();
+new Animal()
+// Animal.call({name: 'pig'});
+// Animal.bind({name: 'cat'})();
 
 
 //1、利用call \ apply \bind 判断数据类型的方式
